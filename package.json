@@ -1,0 +1,21 @@
+{
+  "name": "book-central",
+  "version": "1.0.0",
+  "description": "sign up, login ability, book search functionality option of buying book on website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "handlebars": "^4.7.7",
+    "mysql2": "^3.3.0",
+    "sequelize": "^6.31.1"
+  }
+}
