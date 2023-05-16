@@ -1,3 +1,4 @@
+//html routes rendering 
 const router = require('express').Router();
 //response to route /
 router.get('/', (req, res) => {

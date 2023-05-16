@@ -4,3 +4,7 @@ class BookController{
         this.bookModel = new BookModel(); 
     }
 }
+
+//what needs to be done first 
+//get all books 
+//
