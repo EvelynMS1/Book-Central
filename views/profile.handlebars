@@ -1,0 +1,28 @@
+{{> navbar }}
+
+<div class="profile-container">
+  <div class="profile-header">
+    <h1>{{ profileName }}</h1>
+    <img src="{{ profileImage }}" alt="Profile Image" id="profile-image">
+    <button id="edit-image-btn">Change Profile Picture</button>
+  </div>
+
+  <div class="about-section">
+    <h2>About Me</h2>
+    <p id="about-text">{{ aboutText }}</p>
+    <button id="edit-about-btn">Edit About Section</button>
+  </div>
+
+  <div class="wishlist-section">
+    <h2>My Wishlist</h2>
+    {{#each wishlistBooks}}
+      <div class="book-card">
+        <img src="{{ this.image }}" alt="Book Image">
+        <h3>{{ this.title }}</h3>
+        <p>{{ this.author }}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<script src="/public/js/profile.js"></script>

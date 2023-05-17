@@ -1,26 +1,48 @@
-var express = require("express");
-var path = require("path")
+//process of buying initiates option in the cover display add to checkout 
+const path = require('path');
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const routes = require('./controllers');
+// const helpers = require('./utils/helpers');
 
-var session = require("express-session");
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-var passport = require("./config/passport");
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-// Compress
-var compression = require('compression')
+// Set up Handlebars.js engine with custom helpers
+const hbs = exphbs.create({  });
 
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
-// Sets up the Express App
+app.use(session(sess));
 
-var app = express();
-var PORT = process.env.PORT || 3001;
+// Inform Express.js on which template engine to use
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
-
-app.use(compression())
-
-// Requiring our models for syncing
-var db = require("./models");
-
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+//where public static files are located server connecting to public folder
+app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(routes);
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});
