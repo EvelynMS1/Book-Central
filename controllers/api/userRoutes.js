@@ -1,11 +1,11 @@
 const router = require('express').Router();
 // const User = require('../../models');
-const User = require('../../models/User');
+const User = require('../../models');
 router.post('/signup', async (req, res) => {
   try {
-    console.log(User);
+  
     const userData = await User.create(req.body);
-
+    console.log(userData);
     req.session.save(() => {
       req.session.user= userData.get({plain:true});
     //   req.session.logged_in = true;
