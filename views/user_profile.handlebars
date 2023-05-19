@@ -1,28 +1,74 @@
-{{> navbar }}
+  <!-- Ensures proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <!-- Bootstrap CSS for styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link to the CSS file for the profile page -->
+  <link rel="stylesheet" href="/public/css/profile.css">
+</head>
+<body>
+  <!-- Navbar partial -->
+  {{> navbar }}
+{{#extend "layout"}}
+  {{#content "body"}}
 
-<div class="profile-container">
-  <div class="profile-header">
-    <h1>{{ profileName }}</h1>
-    <img src="{{ profileImage }}" alt="Profile Image" id="profile-image">
-    <button id="edit-image-btn">Change Profile Picture</button>
-  </div>
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Profile picture and about section -->
+      <div class="col-md-4 profile-container">
+        <div class="profile-header">
+          <!-- Display the user's profile name -->
+          <h1>{{ profileName }}</h1>
+          <!-- Display the user's profile picture -->
+          <img src="{{ profilePicture }}" alt="Profile Picture" id="profile-image" class="img-thumbnail">
+          <!-- Button for changing the profile picture -->
+          <button id="edit-image-btn" class="btn btn-primary btn-block mt-2">Change Profile Picture</button>
+        </div>
 
-  <div class="about-section">
-    <h2>About Me</h2>
-    <p id="about-text">{{ aboutText }}</p>
-    <button id="edit-about-btn">Edit About Section</button>
-  </div>
-
-  <div class="wishlist-section">
-    <h2>My Wishlist</h2>
-    {{#each wishlistBooks}}
-      <div class="book-card">
-        <img src="{{ this.image }}" alt="Book Image">
-        <h3>{{ this.title }}</h3>
-        <p>{{ this.author }}</p>
+        <div class="about-section">
+          <!-- Display the user's about text -->
+          <h2>About</h2>
+          <p id="about-text">{{ about }}</p>
+          <!-- Button for editing the about section -->
+          <button id="edit-about-btn" class="btn btn-primary btn-block mt-2">Edit About Section</button>
+        </div>
       </div>
-    {{/each}}
-  </div>
-</div>
 
-<script src="/public/js/profile.js"></script>
+      <div class="col-md-8">
+        <!-- Display the user's nickname, number of books read and age -->
+        <h1 id="nickname">{{ nickname }}</h1>
+        <p><strong>Books Read:</strong> <span id="booksRead">{{ booksRead }}</span></p>
+        <p><strong>Age:</strong> <span id="age">{{ age }}</span></p>
+
+        <!-- Display the user's favorite books -->
+        <h2 class="mt-4">Favorite Books</h2>
+        <div class="row wishlist-section" id="favoriteBooks">
+          <!-- Loop through the favorite books array and create a card for each book -->
+          {{#each favoriteBooks}}
+          <div class="book-card col-md-4">
+            <img src="{{ this.image }}" alt="Book Image">
+            <h3>{{ this.title }}</h3>
+            <p>{{ this.author }}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Add friend form -->
+    <div class="mt-4">
+      <h2>Add Friend</h2>
+      <input type="text" class="form-control" id="friendEmail" placeholder="Enter friend's email">
+      <button id="addFriendButton" class="btn btn-primary mt-2">Add Friend</button>
+    </div>
+
+    <!-- Button for joining the book club -->
+    <button id="bookClubButton" class="btn btn-secondary mt-4">Join Book Club</button>
+  </div>
+
+  <!-- jQuery and Bootstrap JS for interactivity -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.
+
+  {{/content}}
+{{/extend}}
