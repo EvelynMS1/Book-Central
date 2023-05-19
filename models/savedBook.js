@@ -1,6 +1,6 @@
 
 //using extending model method to define model
-const {Models, DataTypes} = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
 class BookTest extends Model {}
@@ -12,25 +12,21 @@ BookTest.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-        }
-    },
-    {
+        },
+   
         title:{
            type:DataTypes.STRING,
            allowNull:false,
-        }
+        },
        
-    },
-    {
-        author:{
+        authors:{
             type:DataTypes.STRING
-        }
+        },
 
-    },
-    {
+
         isbn:{
             type:DataTypes.STRING
-        }
+        },
 
     },
     {
@@ -40,6 +36,7 @@ BookTest.init(
         underscore: true,
         modelName:'bookTest'
     }
+
 );
 
 module.exports = BookTest;

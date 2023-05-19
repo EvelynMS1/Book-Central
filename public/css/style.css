@@ -1,112 +1,113 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    background-image: url("./assets/img/bookshelf_06.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: -1;
-    opacity: 0.9;
-  }
+body {
+  font-family: 'Cute Font', cursive; 
+  text-align: center; /* Align all content in the center */
+}
 
-  .header {
-    height: 500px;
-    position: relative;
-    font-family: 'Hind', sans-serif;
-  }
-  
-  .header h1 {
-    color: #fff;
-    font-size: 5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 150px;
-  } 
-  
-  .login {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: -247px;
-    padding: 50px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-    opacity: 0.9;
-  }
-  
-  .login h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .login form label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .login form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .login form input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .login p {
-    text-align: center;
-  }
-  
-  .login p a {
-    color: #4CAF50;
-  }
-  
-  .guest {
-    text-align: center;
-    margin-top: 34px;
-  }
-  
-  .guest h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color:#fff;
-  }
-  
-  .guest p {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    color:#fff;
-  }
-  
-  .guest a {
-    background-color: #4CAF50;
-    color: #fff;
-  }  
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("../assets/img/bookshelf_06.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.header {
+  height: 500px;
+  position: relative;
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 150px;
+} 
+
+.login {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: -247px;
+  padding: 50px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  opacity: 0.9;
+}
+
+.login h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.login form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.login form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login form input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.login p {
+  text-align: center;
+}
+
+.login p a {
+  color: #4CAF50;
+}
+
+.guest {
+  text-align: center;
+  margin-top: 34px;
+}
+
+.guest h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.guest p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.guest a {
+  background-color: #4CAF50;
+  color: #fff;
+}

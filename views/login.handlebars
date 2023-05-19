@@ -15,34 +15,54 @@
   </div>
 </div> --}}
 
-  {{!-- <style>
+ <style>
     @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
-  </style> --}}
-
-
+  </style>  
     <div class="background-image">
-    <img src="./assets/img/bookshelf_06.png" alt="Bookshelf background">
+    <img src= "../public/assets/img/bookshelf_06.png" alt="Bookshelf background">
   </div>
   <div class="container">
     <div class="header">
       <h1>Book Central</h1>
     </div>
+
     <div class="login">
       <h2>Member's Access</h2>
-      <form>
+      <form class ="form login-form">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+        <input type="text" id="username-login" name="username">
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password-login" name="password">
         <input type="submit" value="Login">
       </form>
-      <p>Don't have an account? <a href="#">Sign up</a></p>
+      <p>Don't have an account? <a href="./signup.handlebars">Sign up</a></p>
     </div>
     <div class="guest">
       <h2>Guest Access</h2>
       <p>Browse our collection of books without logging in:</p>
       <a href="#">Browse Books</a>
     </div>
+    <div class="col-md-6">
+    <h2>Signup</h2>
+
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
   </div>
-  {{!-- <script src="./js/script.js"></script> --}}
+  </div>
+  <script src="/js/login.js"></script>
 
