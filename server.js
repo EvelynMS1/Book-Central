@@ -29,7 +29,7 @@ const sessionConfig = {
   })
 };
 
-app.use(session(sessionConfig));
+
 
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
@@ -39,7 +39,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //where public static files are located server connecting to public folder
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(session(sessionConfig));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {

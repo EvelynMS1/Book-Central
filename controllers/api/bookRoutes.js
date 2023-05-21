@@ -1,4 +1,4 @@
-// const bookModel = require('../../models/Book');
+const bookModel = require('../../models/SavedBook');
 // class BookController{
 //     constructor(){
 //         this.bookModel = new BookModel(); 

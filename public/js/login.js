@@ -1,24 +1,28 @@
 const loginFormHandler = async(event)=>{
   event.preventDefault();
   //collecting values from login form
-  const username = document.querySelector('#username-login').value.trim();
+  const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
 
-  if(email&&password) {
+  if (email && password) {
+   console.log(email); 
     const response = await fetch('/api/users/login',{
       method:'POST',
-      body: JSON.stringify({username,password}),
-      headers: {'Content-Type':'application/js'}
+      body: JSON.stringify({ email:email, password:password }),
+      headers: {'Content-Type':'application/json'}
     });
-    if(response.ok){
-      document.location.replace('.views/homepage');
-    }else{
-      alert(response.status);
+
+    if (response.ok) {
+      document.location.replace('/homepage');
+    } else {
+      alert(response.statusText);
     }
   }
 };
 //sign up function 
+//signup@gmail.com 
+//signupuser
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -43,7 +47,7 @@ const signupFormHandler = async (event) => {
 
 document
 .querySelector('.login-form')
-.addEventListener('submit',loginFormHandler);
+.addEventListener('submit', loginFormHandler);
 
 document
   .querySelector('.signup-form')
