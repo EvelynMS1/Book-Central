@@ -3,13 +3,13 @@ body {
     margin: 0;
     padding: 0;
   }
-
+  
+  /*  Main content */
   .content {
     display: flex;
     margin-right: 200x;
     padding: 20px;
   }
-  
   .content h1 {
     text-align: center;
     margin-top: 0;
@@ -68,7 +68,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111; 
+    background-color: #ce3737; 
     overflow-x: hidden; 
     padding-top: 20px;
   }
