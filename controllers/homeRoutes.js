@@ -1,7 +1,7 @@
 //html routes rendering 
 const router = require('express').Router();
-const { User } = require('../models');
-const withAuth = require('..');
+// const { User } = require('../models');
+// const withAuth = require('../../Book-Central/util/auth');
 //response to route /
 router.get('/', (req, res) => {
    res.render('login');
