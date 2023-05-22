@@ -51,7 +51,8 @@
 // });
 
 // $('#bookClubButton').on('click', async function() {
-const commentFormHandler = async (event) => {
+  console.log('hello');
+const commentFormHandler = async () => {
   const title = sessionStorage.getItem('userbooktitle');
   console.log(title);
   if (title) {
@@ -75,5 +76,5 @@ const commentFormHandler = async (event) => {
 // Perform AJAX request to server to add the friend, depends on server-side logic
 
 document
-  .querySelector('.commentsReviews')
-  .addEventListener('submit', commentFormHandler)
+  .querySelector('#commentReview')
+  .addEventListener('click', commentFormHandler)
