@@ -1,16 +1,16 @@
   <!-- Ensures proper rendering and touch zooming -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
   <title>Profile Page</title>
   <!-- Bootstrap CSS for styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Link to the CSS file for the profile page -->
-  <link rel="stylesheet" href="/public/css/profile.css">
-</head>
-<body>
+  <link rel="stylesheet" href="/css/profile.css">
+
+
   <!-- Navbar partial -->
-  {{> navbar }}
-{{#extend "layout"}}
-  {{#content "body"}}
+  {{!-- {{> navbar }} --}}
+{{!-- {{#extend "layout"}}
+  {{#content "body"}} --}}
 
   <div class="container mt-4">
     <div class="row">
@@ -69,6 +69,7 @@
   <!-- jQuery and Bootstrap JS for interactivity -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5."></script>
+  <script src="/js/profile.js"></script>
 
-  {{/content}}
-{{/extend}}
+  {{!-- {{/content}}
+{{/extend}} --}}

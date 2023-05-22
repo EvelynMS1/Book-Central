@@ -60,6 +60,10 @@ router.get('/homepage', (req, res) => {
 router.get('/checkout', (req, res) => {
    res.render('checkout');
 });
+
+router.get('/profile', (req, res) => {
+   res.render('profile');
+});
 // router.get('/login', (req, res) => {
 //    // If a session exists, redirect the request to the homepage
 //    if (req.session.logged_in) {
