@@ -20,6 +20,9 @@ $(document).ready(function () {
   document.location.replace('/profile');
 });
 
+document
+  .querySelector("#submitBtn")
+
 //get item from session storage 
 //book 
 //  const booktitle = sessionStorage.getItem(userbookTitle);
