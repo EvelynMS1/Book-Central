@@ -118,6 +118,7 @@ const cardholder = document.querySelector(".flip-card");
       document.location.replace('/checkout');
       //save to local storage
       sessionStorage.setItem('userbooktitle',storedtitle);
+      // sessionStorage.setItem()
       console.log(storedtitle);
 
     }
@@ -158,19 +159,19 @@ document
   .addEventListener('click', bookFormHandler)
 document
   .querySelector('#checkoutBtn1')
-  .addEventListener('click',bookCheckoutHandler)
+  .addEventListener('click',bookFormHandler)
 document
   .querySelector('#checkoutBtn2')
-  .addEventListener('click',bookCheckoutHandler)
+  .addEventListener('click',bookFormHandler)
 document
   .querySelector('#checkoutBtn3')
-  .addEventListener('click',bookCheckoutHandler)
+  .addEventListener('click',bookFormHandler)
 document
   .querySelector('#checkoutBtn4')
-  .addEventListener('click',bookCheckoutHandler)
+  .addEventListener('click',bookFormHandler)
 document
   .querySelector('#checkoutBtn5')
-  .addEventListener('click',bookCheckoutHandler)
+  .addEventListener('click',bookFormHandler)
  
 
 // document 

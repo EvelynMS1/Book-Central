@@ -38,6 +38,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      sessionStorage.setItem('userData.id',userData.id);
        document.location.replace('/homepage');
     } else {
       alert(response.statusText);

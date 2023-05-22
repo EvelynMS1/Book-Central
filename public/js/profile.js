@@ -63,6 +63,8 @@ const commentFormHandler = async () => {
     });
     if (response.ok) {
       console.log('success!');
+    }else {
+      alert('Failed to add book');
     }
   }
 }

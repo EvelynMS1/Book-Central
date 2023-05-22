@@ -1,11 +1,12 @@
-$(document).ready(function () {
-  $('#checkout-form').on('submit', function (e) {
-    e.preventDefault();  // Prevent form from being submitted normally
 
-    let deliveryAddress = $('#address').val();
-    let shippingMethod = $('#shipping-method').val();
-    let billingAddress = $('#billing-address').val();
-    let paymentMethod = $('#payment-method').val();
+
+const checkoutFormHandler = async(event)=> {
+    event.preventDefault();  // Prevent form from being submitted normally
+
+    const deliveryAddress = $('#address').val();
+    const shippingMethod = $('#shipping-method').val();
+    const billingAddress = $('#billing-address').val();
+    const paymentMethod = $('#payment-method').val();
     //respond saying checkout is complete bookworm!
     //saves to session once filled out 
     sessionStorage.setItem('deliveryaddress', deliveryAddress);
@@ -16,12 +17,13 @@ $(document).ready(function () {
     // Implement AJAX request to server to submit the form data
     // This depends on your server-side logic
 
-  });
+
   document.location.replace('/profile');
-});
+};
 
 document
   .querySelector("#submitBtn")
+  .addEventListener('click',checkoutFormHandler )
 
 //get item from session storage 
 //book 
