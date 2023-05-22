@@ -39,9 +39,9 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  .flip-card:hover .flip-card-inner {
+  /* .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
+  } */
   
   .flip-card-front, .flip-card-back {
     position: absolute;
@@ -75,7 +75,7 @@ body {
   
   .bg-img {
    
-    background-image: url("./public/assets/img/background1.jpg");
+    background-image: url("./assets/img/background1.jpg");
   
     min-height: 380px;
  

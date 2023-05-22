@@ -1,16 +1,16 @@
 //html routes rendering 
 const router = require('express').Router();
-const{User}= require('../models');
+const { User } = require('../models');
 const withAuth = require('..');
 //response to route /
-router.get('/',(req,res)=>{
+router.get('/', (req, res) => {
    res.render('login');
 
 });
 // router.get('/',(req, res) => {  
 //    if (req.session.logged_in=true) {
 //      res.redirect('/homepage');
-     
+
 //    } else{
 //       next();
 //    }
@@ -18,7 +18,7 @@ router.get('/',(req,res)=>{
 
 
 
-  
+
 // {
 //       loggedIn: req.session.loggedIn,
 //    }
@@ -26,8 +26,8 @@ router.get('/',(req,res)=>{
 // x
 // router.get('/api/users/login', (req, res) => {
 //    // If a session exists, redirect the request to the homepage
-   
- 
+
+
 //    res.render('login');
 //  });
 // router.get('/users',async(req,res)=>{
@@ -44,17 +44,21 @@ router.get('/',(req,res)=>{
 //    }
 
 // });
-router.get('/login',(req,res)=>{
-   if(req.session.loggedIn){
+router.get('/login', (req, res) => {
+   if (req.session.loggedIn) {
       res.redirect('/homepage');
       return;
    }
-      res.render('login');
-   
+   res.render('login');
+
 });
- //handlebar file for login
-router.get('/homepage',(req,res) => {
-    res.render('homepage');
+//handlebar file for login
+router.get('/homepage', (req, res) => {
+   res.render('homepage');
+});
+
+router.get('/checkout', (req, res) => {
+   res.render('checkout');
 });
 // router.get('/login', (req, res) => {
 //    // If a session exists, redirect the request to the homepage
@@ -62,17 +66,17 @@ router.get('/homepage',(req,res) => {
 //      res.redirect('/homepage');
 //      return;
 //    }
- 
+
 //    res.render('homepage');
 //  });
- 
+
 // router.get('', (req, res) => {
 //    // If the user is already logged in, redirect the request to another route
 //    if (req.session.logged_in) {
 //      res.redirect('/homepage');
 //      return;
 //    }
- 
+
 //    res.render('login');
 //  });
 //endpoints
