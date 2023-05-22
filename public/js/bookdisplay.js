@@ -1,6 +1,6 @@
-  const frontCard = document.querySelectorAll(".flip-card-front");
-  const bookdiv = document.querySelector(".booklayout");
-  const btncheckout = document.querySelectorAll(".checkoutBtnn");
+const frontCard = document.querySelectorAll(".flip-card-front");
+const bookdiv = document.querySelector(".booklayout");
+const btncheckout = document.querySelectorAll(".checkoutBtnn");
 const authorN = document.querySelector(".authorName");
 const mainCard = document.querySelector(".flip-card-inner");
 const cardholder = document.querySelector(".flip-card");
