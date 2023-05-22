@@ -16,7 +16,7 @@ const loginFormHandler = async(event)=>{
     if (response.ok) {
       document.location.replace('/homepage');
     } else {
-      alert(response.statusText);
+      alert('Incorrect Email and or Password');
     }
   }
 };
@@ -41,7 +41,7 @@ const signupFormHandler = async (event) => {
       sessionStorage.setItem('userData.id',userData.id);
        document.location.replace('/homepage');
     } else {
-      alert(response.statusText);
+      alert('incorrect username or password');
     }
   }
 };

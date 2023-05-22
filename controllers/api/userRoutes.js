@@ -20,6 +20,7 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   console.log(req.body.email);
+
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -27,15 +28,18 @@ router.post('/login', async (req, res) => {
       res
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
+
       return; 
     }
 //hASHING THE PASSWORD PROVIDED AND THEN CHECKING THE PASSWORD IN DATABASE
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
+      
       res
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
+        
       return;
     }
 
