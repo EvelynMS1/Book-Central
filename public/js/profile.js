@@ -17,7 +17,6 @@ const storeBookFormHandler = async () => {
     }
   }
 }
-
 const getUserBookFormHandler = async () => {
 
   const response = await fetch('/bookRetrieve', {

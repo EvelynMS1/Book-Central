@@ -38,14 +38,15 @@ router.get('/bookRetrieve', async (req, res) => {
    console.log('here');
    try {
       
-     
+    const userId = req.session.user_id;
+    console.log('userId:',userId); 
      // Find the current user by their ID
-     const user = await User.findOne({ where: { id: req.session.user_id} });
+     const user = await User.findOne({ where: { id: userId} });
       console.log('here',user);
      if (user) {
        // If the user is found, retrieve their associated book(s)
        const books = await Savedbook.findAll({
-         where: { user: user }, // Assuming there is a foreign key column 'userId' in the Book model
+         where: { userId: userId }, // Assuming there is a foreign key column 'userId' in the Book model
          attributes: ['title'], // Specify the attributes/columns to retrieve (in this case, only the title)
        });
  

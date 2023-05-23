@@ -125,7 +125,7 @@ async function addValuestoCard(bookArray) {
         const storedtitle = savedtitle.textContent;
         const savedauthor = div.querySelector('.author');
         const storedauthor = savedauthor.textContent;
-        document.location.replace('/checkout');
+        document.location.replace('/wishlist');
         //save to local storage
         sessionStorage.setItem('userbooktitle', storedtitle);
         sessionStorage.setItem('userbookauthor', storedauthor);
@@ -135,24 +135,6 @@ async function addValuestoCard(bookArray) {
       }
 
     });
-
-
-    card.addEventListener('click', function (event) {
-      const target = event.target;
-      if (target.classList.contains('wishlistBtn')) {
-        const div = target.closest('.btnfront');
-        const savedtitle = div.querySelector('p');
-        const storedtitle = savedtitle.textContent;
-
-        document.location.replace('/wishlist');
-
-        //save to local storage
-        sessionStorage.setItem('userbooktitle', storedtitle);
-        // sessionStorage.setItem()
-        console.log(storedtitle);
-
-      }
-    })
 
 
   });
