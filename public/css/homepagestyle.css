@@ -60,11 +60,11 @@ body {
     color: black;
   }
   
-  .flip-card-back {
+  /* .flip-card-back {
     background-color: #2980b9;
     color: white;
     transform: rotateY(180deg);
-  }
+  } */
   .sidenav {
     height: 100%; 
     width: 160px; 
@@ -86,7 +86,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
+  }
 =======
 .booklayout {
   display: grid;
@@ -175,9 +175,9 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.flip-card:hover .flip-card-inner {
+/* .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
-}
+} */
 
 .flip-card-front,
 .flip-card-back {
@@ -192,12 +192,12 @@ body {
   background-color: #bbb;
   color: black;
 }
-
+/* 
 .flip-card-back {
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
-}
+} */
 
 /* .bg-img {
   min-height: 100%;

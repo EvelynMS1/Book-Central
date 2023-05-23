@@ -82,13 +82,15 @@ async function addValuestoCard(bookArray) {
     const wishbutton = document.createElement('button');
     wishbutton.classList.add('wishlistBtn');
     wishbutton.textContent = 'Add to Wishlist';
-    //create elements p and img for storing content
+    //create elements p and img for storing content with class name
     const author = document.createElement('p');
     author.classList.add('author');
     author.textContent = item.bookauthor;
+
     const title = document.createElement('p');
     title.classList.add('title');
     title.textContent = item.booktitle;
+
     const img = document.createElement('img');
     img.setAttribute('src', item.img);
 
@@ -105,16 +107,34 @@ async function addValuestoCard(bookArray) {
       const target = event.target;
       if (target.classList.contains('checkoutBtn')) {
         const div = target.closest('.btnfront');
-        const savedtitle = div.querySelector('.checkoutBtn');
+        const savedtitle = div.querySelector('.title');
         const storedtitle = savedtitle.textContent;
+        const savedauthor = div.querySelector('.author');
+        const storedauthor = savedauthor.textContent;
         document.location.replace('/checkout');
         //save to local storage
         sessionStorage.setItem('userbooktitle', storedtitle);
+        sessionStorage.setItem('userbookauthor', storedauthor);
         // sessionStorage.setItem()
         console.log(storedtitle);
+        console.log(storedauthor);
 
+      }else if(target.classList.contains('wishlistBtn')){
+        const div = target.closest('.btnfront');
+        const savedtitle = div.querySelector('.title');
+        const storedtitle = savedtitle.textContent;
+        const savedauthor = div.querySelector('.author');
+        const storedauthor = savedauthor.textContent;
+        document.location.replace('/checkout');
+        //save to local storage
+        sessionStorage.setItem('userbooktitle', storedtitle);
+        sessionStorage.setItem('userbookauthor', storedauthor);
+        // sessionStorage.setItem()
+        console.log(storedtitle);
+        console.log(storedauthor);
       }
-    })
+
+    });
 
 
     card.addEventListener('click', function (event) {
