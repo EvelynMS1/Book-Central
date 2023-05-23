@@ -91,7 +91,10 @@ const cardholder = document.querySelector(".flip-card");
  button.classList.add('checkoutBtn');
  button.textContent = 'Add to Cart';
  
-  const author = document.createElement('h1');
+ const wishbutton = document.createElement('button');
+ wishbutton.classList.add('wishlistBtn');
+ wishbutton.textContent = 'Add to Wishlist';
+  const author = document.createElement('p');
 
   author.textContent = item.bookauthor;
   const title = document.createElement('p');
@@ -104,10 +107,13 @@ const cardholder = document.querySelector(".flip-card");
   // const mainCard = document.createElement('div');
 
   //for the 
-  card.appendChild(button);
-  card.appendChild(author);
-  card.appendChild(title);
+ 
+  card.appendChild(title);  
   card.appendChild(img);
+  card.appendChild(author);
+  card.appendChild(button); 
+  card.appendChild(wishbutton);
+
   
   card.addEventListener('click', function(event){
     const target = event.target;
@@ -128,32 +134,7 @@ const cardholder = document.querySelector(".flip-card");
  };
 
 
-//  const bookCheckoutHandler = async(event)=>{ 
-//   console.log('hello');    
-//    document.location.replace('/checkout');
-//  }
-//going to submit the bookForm1 when button is clicked therefore it will take all the values an be stored in an object to local storage or session
-//retrieve from local storage 
-  //route for redirecting 
-  //
-//   const button = document.querySelector('.checkoutBtnn');
 
-//   if (button && button.addEventListener) {
-//     // The button exists and has the addEventListener method
-//     button.addEventListener('click', function() {
-//       // Event handler code here
-//       console.log('Button clicked!');
-//     });
-//   } else {
-//     console.log('Button or addEventListener is null.');
-//   }
-
-// //  };
-
-  //  btncheckout.forEach(function(button) {
-  //   button.addEventListener('click', ) 
-
-  //   });
 document
   .querySelector('#submitbtn')
   .addEventListener('click', bookFormHandler)
@@ -174,23 +155,3 @@ document
   .addEventListener('click',bookFormHandler)
  
 
-// document 
-//   .querySelector  ('#checkoutBtn')
-//   .addEventListener('click', bookCheckoutHandler);
- 
- //if first one clicked then retrieve the first item from the array 
-
-//when user selects checkout they are directed to the checkout once checkout is complete then that book that they selected on 
-//is stored to the database table with user 
-
-
- // async function bookProperties(fetchdata){
-   
-    // const cards = document.querySelectorAll('.flip-card-front');
-// const  
-
-  //  console.log(bookinfo);
-  //   console.log(title);
-  //   console.log(authors);
-  //   console.log(thumbnailSmlImg);
-  //   console.log(fetchdata);

@@ -1,49 +1,13 @@
 //html routes rendering 
 const router = require('express').Router();
-// const { User } = require('../models');
+const { User, Savedbook } = require('../models');
 // const withAuth = require('../../Book-Central/util/auth');
 //response to route /
 router.get('/', (req, res) => {
    res.render('login');
 
 });
-// router.get('/',(req, res) => {  
-//    if (req.session.logged_in=true) {
-//      res.redirect('/homepage');
 
-//    } else{
-//       next();
-//    }
-
-
-
-
-
-// {
-//       loggedIn: req.session.loggedIn,
-//    }
-
-// x
-// router.get('/api/users/login', (req, res) => {
-//    // If a session exists, redirect the request to the homepage
-
-
-//    res.render('login');
-//  });
-// router.get('/users',async(req,res)=>{
-//    try{
-//       const userData = await User.findAll();
-//       const users = userData.map(user => user.get({plain:true})); 
-//       res.render ('homepage',{
-//          sentence:'user',
-//          users,
-//       })
-
-//    }catch(error){
-//       res.status(500).json({error});
-//    }
-
-// });
 router.get('/login', (req, res) => {
    if (req.session.loggedIn) {
       res.redirect('/homepage');
@@ -60,28 +24,48 @@ router.get('/homepage', (req, res) => {
 router.get('/checkout', (req, res) => {
    res.render('checkout');
 });
+router.get('/signup',(req,res)=>{
+   res.render('signup');
+})
 
 router.get('/profile', (req, res) => {
    res.render('profile');
 });
-// router.get('/login', (req, res) => {
-//    // If a session exists, redirect the request to the homepage
-//    if (req.session.logged_in) {
-//      res.redirect('/homepage');
-//      return;
-//    }
 
-//    res.render('homepage');
-//  });
 
-// router.get('', (req, res) => {
-//    // If the user is already logged in, redirect the request to another route
-//    if (req.session.logged_in) {
-//      res.redirect('/homepage');
-//      return;
-//    }
 
-//    res.render('login');
-//  });
-//endpoints
+router.get('/bookRetrieve', async (req, res) => {
+   console.log('here');
+   try {
+      
+     
+     // Find the current user by their ID
+     const user = await User.findOne({ where: { id: req.session.user_id} });
+      console.log('here',user);
+     if (user) {
+       // If the user is found, retrieve their associated book(s)
+       const books = await Savedbook.findAll({
+         where: { user: user }, // Assuming there is a foreign key column 'userId' in the Book model
+         attributes: ['title'], // Specify the attributes/columns to retrieve (in this case, only the title)
+       });
+ 
+       if (books.length > 0) {
+         // At least one book associated with the user
+         const bookTitle = books[0].title;
+         return bookTitle;
+       } else {
+         // User has no associated books
+         return null;
+       }
+     } else {
+       // User not found
+       return null;
+     }
+   } catch (error) {
+     // Handle any errors that occur during the database query
+     console.error('Error retrieving book title for current user:', error);
+     throw error;
+   }
+ });
+
 module.exports = router;

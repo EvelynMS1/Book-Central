@@ -25,13 +25,3 @@ document
   .querySelector("#submitBtn")
   .addEventListener('click',checkoutFormHandler )
 
-//get item from session storage 
-//book 
-//  const booktitle = sessionStorage.getItem(userbookTitle);
-//       if(booktitle){
-//         const response = await fetch 
-//       }
-//create route to back end 
-//post fetch 
-//once in book table then i connection of tables at same user can be connected 
-//in user profile you can add comments 

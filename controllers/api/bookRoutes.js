@@ -13,10 +13,6 @@ router.post('/comments', async (req, res) => {
       // title: req.session.title}
   });
     console.log(booktitle);
-    // req.session.save(() => {
-    //     req.session.user= booktitle.get
-    // ({plain:true});
-    // req.session.logged_in = true;
 
     res.status(200).json(booktitle);
   }

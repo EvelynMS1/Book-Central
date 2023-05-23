@@ -22,65 +22,15 @@ const loginFormHandler = async(event)=>{
 };
 //sign up function 
 //signup@gmail.com 
-//signupuser
-const signupFormHandler = async (event) => {
-  event.preventDefault();
 
-  const name = document.querySelector('#name-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
-
-  if (name && email && password) {
-    const response = await fetch('/api/users/signup', {
-      method: 'POST',
-      body: JSON.stringify({ name, email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (response.ok) {
-      sessionStorage.setItem('userData.id',userData.id);
-       document.location.replace('/homepage');
-    } else {
-      alert('incorrect username or password');
-    }
-  }
-};
 
 document
 .querySelector('.login-form')
 .addEventListener('submit', loginFormHandler);
 
-document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
 
 
 
 
 
-
-
-// document.querySelector('form');
-// loginForm.addEventListener('submit', function(e) {
-//   e.preventDefault();
-//   const username = document.querySelector('#username').value;
-//   const password = document.querySelector('#password').value;
-  
-//   // Check if username and password are valid
-//   if (username === 'example' && password === 'password') {
-//     alert('Welcome back, ' + username + '!');
-//     // Redirect user to members area
-//     window.location.href = 'members.html';
-//   } else {
-//     alert('Invalid username or password.');
-//   }
-// });
-
-// // Add event listener to browse books link
-// const browseBooksLink = document.querySelector('.guest a');
-// browseBooksLink.addEventListener('click', function(e) {
-//   e.preventDefault();
-//   // Redirect user to books page
-//   window.location.href = 'books.html';
-// });
 

@@ -20,12 +20,15 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
+ .booklayout{
+  display:flex;
+ } 
   .flip-card {
-    margin-left:10%;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
+    /* margin-left:10%; */
+    /* background-color: transparent; */
+    width: 240px;
+    height: 380px;
+    background-color: #e7784c;
     perspective: 1000px;
   }
   
@@ -75,7 +78,7 @@ body {
   
   .bg-img {
    
-    background-image: url("./assets/img/background1.jpg");
+    background-image: url("https://www.emeraldcityfabrics.com/assets/images/products/LI/LIBRARY/CM8214/MULTI/timeless-treasures-library-books-multi-gold-metallic-fabric-Lg.jpg");
   
     min-height: 380px;
  
@@ -108,9 +111,12 @@ body {
   }
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #e7784c;
+    width: 1170px;
   }
-  
+  .heading{
+    font-family:cursive;
+  }
   
   .topnav a {
     float: left;
