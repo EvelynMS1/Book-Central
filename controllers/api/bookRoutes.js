@@ -13,7 +13,7 @@ router.post('/comments', async (req, res) => {
       // title: req.session.title}
   });
     console.log(booktitle);
-
+//response to client in the format of the string for response body from the post on the server side 
     res.status(200).json(booktitle);
   }
   catch (err) {

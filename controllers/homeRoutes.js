@@ -28,14 +28,8 @@ router.get('/signup',(req,res)=>{
    res.render('signup');
 })
 
-router.get('/profile', (req, res) => {
-   res.render('profile');
-});
-
-
-
-router.get('/bookRetrieve', async (req, res) => {
-   console.log('here');
+router.get('/profile', async(req, res) => {
+  console.log('here');
    try {
       
     const userId = req.session.user_id;
@@ -45,14 +39,19 @@ router.get('/bookRetrieve', async (req, res) => {
       console.log('here',user);
      if (user) {
        // If the user is found, retrieve their associated book(s)
-       const books = await Savedbook.findAll({
-         where: { userId: userId }, // Assuming there is a foreign key column 'userId' in the Book model
+       const booksData = await Savedbook.findAll({
+         where: { user_id: userId }, // Assuming there is a foreign key column 'userId' in the Book model
          attributes: ['title'], // Specify the attributes/columns to retrieve (in this case, only the title)
        });
- 
+      //  const books = booksData.get({plain:true});
+       const books = booksData.map(book => book.get({ plain: true }));
+       console.log(books);
+       res.render('profile',{books});
+      
        if (books.length > 0) {
          // At least one book associated with the user
          const bookTitle = books[0].title;
+         console.log(books);
          return bookTitle;
        } else {
          // User has no associated books
@@ -65,8 +64,13 @@ router.get('/bookRetrieve', async (req, res) => {
    } catch (error) {
      // Handle any errors that occur during the database query
      console.error('Error retrieving book title for current user:', error);
-     throw error;
+     res.json(error);
    }
  });
+  
+
+
+
+   
 
 module.exports = router;

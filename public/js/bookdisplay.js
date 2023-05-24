@@ -1,8 +1,6 @@
 const frontCard = document.querySelectorAll(".flip-card-front");
 const bookdiv = document.querySelector(".booklayout");
-const btncheckout = document.querySelectorAll(".checkoutBtnn");
-const authorN = document.querySelector(".authorName");
-const mainCard = document.querySelector(".flip-card-inner");
+const mainCard = document.querySelectorAll(".flip-card-inner");
 const cardholder = document.querySelector(".flip-card");
 
 //calling fetch function  
@@ -75,10 +73,11 @@ async function addValuestoCard(bookArray) {
     //main card holder of two divs with class of flip card
     const card = frontCard[index];
     card.classList.add('btnfront');
+   
     //creating buttons checkout and wishlist for front card
-    const button = document.createElement('button');
-    button.classList.add('checkoutBtn');
-    button.textContent = 'Add to Cart';
+    const checkoutbutton = document.createElement('button');
+    checkoutbutton.classList.add('checkoutBtn');
+    checkoutbutton.textContent = 'Add to Cart';
     const wishbutton = document.createElement('button');
     wishbutton.classList.add('wishlistBtn');
     wishbutton.textContent = 'Add to Wishlist';
@@ -99,11 +98,13 @@ async function addValuestoCard(bookArray) {
     card.appendChild(title);
     card.appendChild(img);
     card.appendChild(author);
-    card.appendChild(button);
+    card.appendChild(checkoutbutton);
     card.appendChild(wishbutton);
+    bookdiv.appendChild(card);
 
 
-    card.addEventListener('click', function (event) {
+    bookdiv.addEventListener('click', function (event) {
+      console.log('btns eventlistener');
       const target = event.target;
       if (target.classList.contains('checkoutBtn')) {
         const div = target.closest('.btnfront');
@@ -111,28 +112,29 @@ async function addValuestoCard(bookArray) {
         const storedtitle = savedtitle.textContent;
         const savedauthor = div.querySelector('.author');
         const storedauthor = savedauthor.textContent;
+       
+        //save to local storage
+        sessionStorage.setItem('userbooktitle', storedtitle);
+        sessionStorage.setItem('userbookauthor', storedauthor);
+        // sessionStorage.setItem()
+        console.log(storedtitle);
+        console.log(storedauthor); 
         document.location.replace('/checkout');
-        //save to local storage
-        sessionStorage.setItem('userbooktitle', storedtitle);
-        sessionStorage.setItem('userbookauthor', storedauthor);
-        // sessionStorage.setItem()
-        console.log(storedtitle);
-        console.log(storedauthor);
-
-      }else if(target.classList.contains('wishlistBtn')){
-        const div = target.closest('.btnfront');
-        const savedtitle = div.querySelector('.title');
-        const storedtitle = savedtitle.textContent;
-        const savedauthor = div.querySelector('.author');
-        const storedauthor = savedauthor.textContent;
-        document.location.replace('/wishlist');
-        //save to local storage
-        sessionStorage.setItem('userbooktitle', storedtitle);
-        sessionStorage.setItem('userbookauthor', storedauthor);
-        // sessionStorage.setItem()
-        console.log(storedtitle);
-        console.log(storedauthor);
       }
+      // }else if(target.classList.contains('wishlistBtn')){
+      //   const div = target.closest('.btnfront');
+      //   const savedtitle = div.querySelector('.title');
+      //   const storedtitle = savedtitle.textContent;
+      //   const savedauthor = div.querySelector('.author');
+      //   const storedauthor = savedauthor.textContent;
+      //   document.location.replace('/wishlist');
+      //   //save to local storage
+      //   sessionStorage.setItem('userbooktitle', storedtitle);
+      //   sessionStorage.setItem('userbookauthor', storedauthor);
+      //   // sessionStorage.setItem()
+      //   console.log(storedtitle);
+      //   console.log(storedauthor);
+      // }
 
     });
 
@@ -145,20 +147,4 @@ async function addValuestoCard(bookArray) {
 document
   .querySelector('#submitbtn')
   .addEventListener('click', bookFormHandler)
-document
-  .querySelector('#checkoutBtn1')
-  .addEventListener('click', bookFormHandler)
-document
-  .querySelector('#checkoutBtn2')
-  .addEventListener('click', bookFormHandler)
-document
-  .querySelector('#checkoutBtn3')
-  .addEventListener('click', bookFormHandler)
-document
-  .querySelector('#checkoutBtn4')
-  .addEventListener('click', bookFormHandler)
-document
-  .querySelector('#checkoutBtn5')
-  .addEventListener('click', bookFormHandler)
-
 

@@ -44,13 +44,15 @@
         <h2 class="mt-4">Favorite Books</h2>
         <div class="row wishlist-section" id="favoriteBooks">
           <!-- Loop through the favorite books array and create a card for each book -->
-          {{#each favoriteBooks}}
+          {{#each books as |book|}}
           <div class="book-card col-md-4">
-            <img src="{{ this.image }}" alt="Book Image">
-            <h3>{{ this.title }}</h3>
-            <p>{{ this.author }}</p>
+            {{!-- <img src="{{ this.image }}" alt="Book Image"/> --}}
+            <h3>{{book.title}}</h3>
+            {{!-- <p>{{ this.author }}</p> --}}
           </div>
           {{/each}}
+          {{!-- query select append child to section wishlist section target template literal appendChild afterwards 
+          profile.js --}}
         </div>
       </div>
     </div>
