@@ -1,42 +1,51 @@
-
-//using extending model method to define model
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class SavedBook extends Model {}
-//init(attributes,options)
+
+SavedBook.associate = models => {
+    SavedBook.belongsTo(models.User, {
+      foreignKey: 'user_id',
+    });
+};
+
 SavedBook.init(
     {
-        book_id:{
+        book_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
    
-        title:{
-           type:DataTypes.STRING,
-           allowNull:false,
+        title: {
+           type: DataTypes.STRING,
+           allowNull: false,
         },
        
-        authors:{
-            type:DataTypes.STRING
+        authors: {
+            type: DataTypes.STRING,
         },
 
-
-        isbn:{
-            type:DataTypes.STRING
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
         },
 
+        isbn: {
+            type: DataTypes.STRING,
+        },
     },
     {
         sequelize,
-        timestamps:false,
+        timestamps: false,
         freezeTableName: true,
-        underscore: true,
-        modelName:'bookTest'
+        underscored: true,
+        modelName: 'savedBook', // change modelName to 'SavedBook' to match the class name
     }
-
 );
 
 module.exports = SavedBook;

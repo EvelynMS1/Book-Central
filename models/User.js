@@ -1,12 +1,20 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const Savedbook = require('./Savedbook');
 
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
+
+User.associate = models => {
+  User.hasMany(models.SavedBook, {
+    foreignKey: 'user_id',
+    as: 'SavedBooks', // this is alias
+  });
+};
 
 User.init(
   {
@@ -54,5 +62,13 @@ User.init(
     modelName: 'user',
   }
 );
+
+User.associate = (models) => {
+  User.hasMany(models.Savedbook, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
+  });
+};
 
 module.exports = User;
