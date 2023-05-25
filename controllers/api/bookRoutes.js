@@ -1,5 +1,4 @@
 const router = require('express').Router();
-// const withAuth = require('../../util/auth');
 const { Savedbook } = require('../../models');
 router.post('/comments', async (req, res) => {
   try {
@@ -8,9 +7,6 @@ router.post('/comments', async (req, res) => {
       ...req.body,
       user_id:req.session.user_id,
     
-      // {...req.body,
-      // user_id: req.session.user_id,
-      // title: req.session.title}
   });
     console.log(booktitle);
 //response to client in the format of the string for response body from the post on the server side 
