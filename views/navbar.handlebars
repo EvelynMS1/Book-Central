@@ -1,0 +1,29 @@
+<!-- navbar.handlebars -->
+<link rel="stylesheet" href="/public/css/navbar.css">
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="/" class="navbar-brand">Book Central</a>
+  </div>
+  <div class="navbar-middle">
+    <form action="/search" method="GET">
+      <input type="text" placeholder="Search for books..." name="q">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  <div class="navbar-right">
+    <a href="/">Home</a>
+    <a href="/profile">Profile</a>
+    <div class="dropdown">
+      <button class="dropbtn">Wishlist</button>
+      <div class="dropdown-content">
+        {{#each wishlist}}
+          <a href="#">{{this.title}} - {{this.author}}</a>
+        {{/each}}
+      </div>
+    </div>
+    <a href="/cart">Cart</a>
+    <a href="/about">About</a>
+  </div>
+</nav>
+
+<script src="/public/js/navbar.js"></script>

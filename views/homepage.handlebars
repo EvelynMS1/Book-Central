@@ -1,102 +1,455 @@
-<link rel="stylesheet" href="css/homepagestyle.css">
-
-<div class="bg-img">
-  {{!-- <img class="homepagebookimg"
-    src="https://www.emeraldcityfabrics.com/assets/images/products/LI/LIBRARY/CM8214/MULTI/timeless-treasures-library-books-multi-gold-metallic-fabric-Lg.jpg" />
-  --}}
-  <div class="container">
-    <div class="topnav">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <div class="search">
-        <div class="searchform">
-          <label for="title">Book Search</label>
-          <input type="text" id="title" name="name">
-          <input type="submit" id="submitbtn" value="Submit">
-        </div>
-      </div>
-    </div>
-    <div class="heading">
-      <h1>Book Worms</h1>
-    </div>
-  </div>
-</div>
+<link rel="stylesheet" href="/css/homepage.css">
 
 <div class="booklayout">
-  <div class="bookForm1">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-
-        <div class="flip-card-front">
-
-        </div>
-
-        <div class="flip-card-back">
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bookForm2">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-
-        </div>
-        <div class="flip-card-back">
-
-
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bookForm3">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-
-
-        </div>
-        <div class="flip-card-back">
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bookForm4">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-
-        </div>
-        <div class="flip-card-back">
-
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bookForm5">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-
-        </div>
-        <div class="flip-card-back">
-
-
+  
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<script src="/js/bookdisplay.js"></script>
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bookForm">
+    <div class="card">
+      <div class="card-front">
+        <div class="cardFace">
+          <div class="cardContent">
+            <h2>{{this.booktitle}}</h2>
+            <p class="author">{{this.bookauthor}}</p>
+            <img src="{{this.img}}" alt="Book Cover">
+            <div class="button-container">
+              <button class="button cart">Add to Cart</button>
+              <button class="button wishlist">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="/public/js/bookdisplay.js"></script>
