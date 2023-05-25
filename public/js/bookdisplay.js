@@ -5,8 +5,9 @@ const cardholder = document.querySelector(".flip-card");
 
 //calling fetch function  
 const bookFormHandler = async (event) => {
-  const booktitlesearch = document.querySelector("#title").value.trim();
-  console.log('bookFormHandler');
+  const booktitlesearch = localStorage.getItem('inputValue');
+  // const booktitlesearch = document.querySelector("#title").value.trim();
+  // console.log('bookFormHandler');
   //getting value from search bar
   console.log(booktitlesearch);
   logJSONData(booktitlesearch);
@@ -141,10 +142,10 @@ async function addValuestoCard(bookArray) {
 
   });
 };
+bookFormHandler();
 
 
-
-document
-  .querySelector('#submitbtn')
-  .addEventListener('click', bookFormHandler)
+// document
+//   .querySelector('#submitbtn')
+//   .addEventListener('click', bookFormHandler)
 

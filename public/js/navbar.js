@@ -1,4 +1,6 @@
 // This is a self-invoking anonymous function to avoid polluting the global namespace
+const inputValue = document.querySelector('.inputSearchNavBar');
+const buttoninputValue = document.querySelector('.buttonSearchNavBar');
 (function() {
     // Get the dropdown button
     var dropdown = document.querySelector('.dropdown');
@@ -37,3 +39,8 @@
         });
     });
 })();
+
+buttoninputValue.addEventListener('click',function(){
+    localStorage.setItem('inputValue',inputValue.value);
+    window.location.replace('/homepage');
+})
