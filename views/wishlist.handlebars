@@ -1,39 +1,13 @@
 <!-- wishlist.handlebars -->
-{{!-- recieve array of wishListItems, each item should be an object with 'title and author properties' --}}
-<!-- wishlist.handlebars -->
-<div class="dropdown-menu wishlist-dropdown">
-  <div class="row">
-    {{#each wishlistItems}}
-    <div class="col-6">
-        {{!-- replace {{this.id}} with the correct identifier so user can access book --}}
-      <a href="/book/{{this.id}}">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">{{this.title}}</h5>
-            <p class="card-text">{{this.author}}</p>
-            <button class="btn btn-link share-button" data-book-id="{{this.id}}">🔗</button>
-          </div>
-        </div>
-      </a>
-    </div>
-    {{/each}}
+<link rel="stylesheet" href="/public/css/wishlist.css">
+<div class="dropdown">
+  <button class="dropbtn">Wishlist</button>
+  <div class="dropdown-content">
+    {{#if showDropdown}}
+      {{#each wishlist}}
+        <a href="#">{{this.title}} - {{this.author}}</a>
+      {{/each}}
+    {{/if}}
   </div>
 </div>
-<!-- wishlist.handlebars -->
-<div class="dropdown-menu wishlist-dropdown">
-  <div class="row">
-    {{#each wishlistItems}}
-    <div class="col-6">
-      <a href="/book/{{this.id}}">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">{{this.title}}</h5>
-            <p class="card-text">{{this.author}}</p>
-            <button class="btn btn-link share-button" data-book-id="{{this.id}}">🔗</button>
-          </div>
-        </div>
-      </a>
-    </div>
-    {{/each}}
-  </div>
-</div>
+<script src="/public/js/wishlist.js"></script>

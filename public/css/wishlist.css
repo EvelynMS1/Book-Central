@@ -1,15 +1,23 @@
 /* wishlist.css */
-.wishlist-dropdown {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid black;
-    color: black;
-  }
-  
-  .wishlist-dropdown .row > div {
-    padding: 5px;
-  }
-  
-  .wishlist-dropdown .card {
-    margin-bottom: 10px;
-  }
-  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(249, 249, 249, 0.8);
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+}
