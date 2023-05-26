@@ -1,7 +1,7 @@
 //signupuser
-const signUppageLink = async() =>{
-    document.location.replace('/signup');
-  }
+// const signUppageLink = async() =>{
+//     document.location.replace('/signup');
+//   }
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
