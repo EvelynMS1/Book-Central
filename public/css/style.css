@@ -10,9 +10,9 @@ body {
 }
 
 .container {
+  display:block;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
 
 }
 
@@ -30,22 +30,18 @@ body {
   opacity: 0.9;
 }
 
-.header {
-
-  position: relative;
-}
 
 .header h1 {
   color: #fff;
   font-size: 5rem;
   font-weight: bold;
-  margin-top: 150px;
+
 } 
 
 .login{
   width: 50%;
   margin: 0 auto;
-  margin-top: -247px;
+  /* margin-top: -247px; */
   padding: 50px;
   background-color: #f0f0f0;
   border-radius: 5px;
