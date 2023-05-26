@@ -36,7 +36,7 @@ body {
   
   /* Add friend button */
   #addFriendButton {
-    background-image: url('add-friend-icon.png');
+    background-image: url('https://media.istockphoto.com/vectors/add-friend-icon-vector-illustration-vector-id667646244?k=6&m=667646244&s=170667a&w=0&h=80wXeCgv-z1b0IAjsl-fKA43KxdUMcAj10ofYmcVr5M=');
     background-size: cover;
     width: 50px;
     height: 50px;
