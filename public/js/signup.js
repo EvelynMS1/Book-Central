@@ -29,6 +29,6 @@ document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
 
-document
-  .querySelector('.signup')
-  .addEventListener('click',signUppageLink);
+// document
+//   .querySelector('.signup')
+//   .addEventListener('click',signUppageLink);
