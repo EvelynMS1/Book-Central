@@ -38,8 +38,7 @@ Book-Central Online is a platform that offers a range of features to enhance you
 ## Live-URL-of-Deployed-Application 
 
 [Depoyed Website](https://bookwebnetwork.herokuapp.com/)
- 
-##  Live Screen Recording of Application Functionality 
+
 
 
 
@@ -57,7 +56,7 @@ Book-Central Online is a platform that offers a range of features to enhance you
 Our coding project utilized Node.js and Express.js for creating a RESTful API, Handlebars.js as the template engine, MySQL with the Sequelize ORM for the database, and incorporated both GET and POST routes. Additionally, we embraced at least one new library or technology beyond our discussions. The project followed the MVC folder structure, implemented authentication with express-session and cookies, and ensured the protection of sensitive information through the use of environment variables. These technologies and practices contributed to the development of a robust and secure project.
 
 ## Installation
-
+npm i to install packages
 
 ## Usage Information
 Checkout books and view them in profile page.
