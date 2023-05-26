@@ -5,28 +5,28 @@ Project 2
 
 ## Table of Contents
 
-*  [Description](#Description)
+*  [Description](#description)
           <a name="Description"></a>
           
-*  [Live-URL-of-Deployed-Application](#Live-URL-of-Deployed-Application)
+*  [Live-URL-of-Deployed-Application](#live-url-of-deployed-application)
           <a name="Live-URL-of-Deployed-Application"></a>
 
-*  [Screenshots](#Screenshots)
+*  [Screenshots](#screenshots)
           <a name="Screenshots"></a>
    
-*  [Technologies-Used](#Technologies-Used)
+*  [Technologies-Used](#technologies-used)
           <a name="Technologies Used"></a> 
           
-*  [Installation](#Installation)
+*  [Installation](#installation)
           <a name="Installation"></a> 
     
-*  [Usage-Information](#Usage-Information)
+*  [Usage-Information](#usage-information)
           <a name="Usage Information"></a>  
           
-*  [License](#License)
+*  [License](#license)
           <a name="License"></a> 
          
-*  [Questions](#Questions)
+*  [Questions](#questions)
           <a name="Questions"></a> 
           
 
@@ -37,15 +37,20 @@ Book-Central Online is a platform that offers a range of features to enhance you
 
 ## Live-URL-of-Deployed-Application 
 
-
+[Depoyed Website](#https://bookwebnetwork.herokuapp.com/)
  
 ##  Live Screen Recording of Application Functionality 
 
 
 
 ## Screenshots 
-
-
+![login](public/assets/img/login.png "Sign up")
+![signup](public/assets/img/signup.png)
+![homepage1](public/assets/img/hompage1.png)
+![homepage2](public/assets/img/homepage2.png)
+![checkout](public/assets/img/checkout.png)
+![sweetalert](public/assets/img/sweetalert.png)
+![profile](public/assets/img/profile.png)
 
 ## Technologies Used
 
@@ -55,7 +60,7 @@ Our coding project utilized Node.js and Express.js for creating a RESTful API, H
 
 
 ## Usage Information
-
+Checkout books and view them in profile page.
 ## License
 
 NOTICE: This application is covered under the MIT License
