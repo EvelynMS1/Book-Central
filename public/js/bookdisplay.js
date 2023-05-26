@@ -9,7 +9,7 @@ const bookFormHandler = async (event) => {
   // const booktitlesearch = document.querySelector("#title").value.trim();
   // console.log('bookFormHandler');
   //getting value from search bar
-  console.log(booktitlesearch);
+
   logJSONData(booktitlesearch);
 };
 async function logJSONData(title) {
@@ -18,18 +18,18 @@ async function logJSONData(title) {
   //displaying the results of fetch call 
 
   const bookitemarray = await addValuestoArray(booklist);
-  console.log(bookitemarray);
+
   addValuestoCard(bookitemarray);
 
 };
 async function addValuestoArray(booklist) {
   const booksdisplayed = [booklist.items[0], booklist.items[1], booklist.items[2], booklist.items[3], booklist.items[4]];
-  console.log(booksdisplayed);
+ 
   const resultarray = [];
   //fucntion that goes through each item in the array and then calls the function within it
   for (var i = 0; i < booksdisplayed.length; i++) {
     const fetchdata = booksdisplayed[i];
-    console.log(fetchdata);
+   
     bookinfo = fetchdata.volumeInfo;
     title = bookinfo.title;
     authors = bookinfo.authors;
@@ -37,16 +37,7 @@ async function addValuestoArray(booklist) {
     thumbnailSmlImg = bookinfo.imageLinks.smallThumbnail;
     rating = bookinfo.averageRating;
     categories = bookinfo.categories[0];
-    if (categories) {
-      console.log(categories);
-    } else {
-      console.log('');
-    }
-    if (rating) {
-      console.log(rating);
-    } else {
-      console.log('No ratings');
-    }
+   
     const obj = {
       booktitle: title,
       bookauthor: authors,
@@ -64,9 +55,6 @@ async function addValuestoArray(booklist) {
 
 
 async function addValuestoCard(bookArray) {
-
-
-  console.log(bookArray);
 
 
   //have an array that has all of the object for each book
@@ -105,7 +93,7 @@ async function addValuestoCard(bookArray) {
 
 
     bookdiv.addEventListener('click', function (event) {
-      console.log('btns eventlistener');
+
       const target = event.target;
       if (target.classList.contains('checkoutBtn')) {
         const div = target.closest('.btnfront');
@@ -118,8 +106,7 @@ async function addValuestoCard(bookArray) {
         sessionStorage.setItem('userbooktitle', storedtitle);
         sessionStorage.setItem('userbookauthor', storedauthor);
         // sessionStorage.setItem()
-        console.log(storedtitle);
-        console.log(storedauthor); 
+     
         document.location.replace('/checkout');
       }
       // }else if(target.classList.contains('wishlistBtn')){

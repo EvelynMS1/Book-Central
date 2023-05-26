@@ -20,8 +20,6 @@ const loginFormHandler = async(event)=>{
     }
   }
 };
-//sign up function 
-//signup@gmail.com 
 
 
 document

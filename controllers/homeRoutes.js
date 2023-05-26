@@ -31,10 +31,10 @@ router.get('/profile', async(req, res) => {
    try {
       
     const userId = req.session.user_id;
-    console.log('userId:',userId); 
+   
      // Find the current user by their ID
      const user = await User.findOne({ where: { id: userId} });
-      console.log('here',user);
+    
      if (user) {
        // If the user is found, retrieve their associated book(s)
        const booksData = await Savedbook.findAll({
@@ -43,13 +43,13 @@ router.get('/profile', async(req, res) => {
        });
       //  const books = booksData.get({plain:true});
        const books = booksData.map(book => book.get({ plain: true }));
-       console.log(books);
+       
        res.render('profile',{books});
       
        if (books.length > 0) {
          // At least one book associated with the user
          const bookTitle = books[0].title;
-         console.log(books);
+         
          return bookTitle;
        } else {
          // User has no associated books
@@ -61,7 +61,7 @@ router.get('/profile', async(req, res) => {
      }
    } catch (error) {
      // Handle any errors that occur during the database query
-     console.error('Error retrieving book title for current user:', error);
+     
      res.json(error);
    }
  });

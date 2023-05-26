@@ -8,7 +8,7 @@ router.post('/comments', async (req, res) => {
       user_id:req.session.user_id,
     
   });
-    console.log(booktitle);
+  
 //response to client in the format of the string for response body from the post on the server side 
     res.status(200).json(booktitle);
   }
