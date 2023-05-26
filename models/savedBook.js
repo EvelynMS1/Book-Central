@@ -22,11 +22,17 @@ SavedBook.init(
         authors:{
             type:DataTypes.STRING
         },
-
-
-        isbn:{
-            type:DataTypes.STRING
+        user_id:{
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
         },
+
+        // isbn:{
+        //     type:DataTypes.STRING
+        // },
 
     },
     {
@@ -34,7 +40,7 @@ SavedBook.init(
         timestamps:false,
         freezeTableName: true,
         underscore: true,
-        modelName:'bookTest'
+        modelName:'savedbook'
     }
 
 );
